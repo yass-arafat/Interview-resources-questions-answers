@@ -53,7 +53,7 @@
 
 > Python libraries and frameworks
 ### Describe the key differences between Django and Flask and when would you choose one over the other for web development
-* ![img.png](img.png)
+* ![img.png](resources/images/img.png)
 
 ### How do you work with asynchronous programming in Python and what libraries or framework have you used for this purpose
 `import asyncio
@@ -101,11 +101,25 @@ asyncio.run(main())`
 ### Explain how session management is handled  Python web applications
 
 ### Describe best practices for securing Python web applications against common vulnerabilities
+* Validate inputs and sanitize data
+* Use secure coding libraries and tools
+* Keep Python and libraries up-to-date
+* Implement error handling and logging wisely
+* Adhere to the principle of least privilege
+* Use HTTPS for data transmission
+* Conduct regular security audits and reviews
 
 > DevOps and Cloud Technologies:
 ### How do you containerize Python applications and what tools have you used for this purpose(e.g. Docker)
+* Create a Python application
+* Create a Dockerfile
+* Build the Docker image
+* Run the Docker container
 ### Describe your experience with deploying Python applications on cloud platforms like AWS, Docker, Kubernetes or ECS
 ### Explain the concepts of continuous integration and continuous delivery and how they are implemented in a Python development environment
+* ![ci_cd_main.png](resources/images/ci_cd_main.png)
+* ![ci_cd.png](resources/images/ci_cd.png)
+* ![ci_cd2.png](resources/images/ci_cd2.png)
 
 > Testing and Debugging
 ### Describe the types of testing including unit testing, integration testing, end-to-end testing

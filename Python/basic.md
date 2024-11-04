@@ -15,6 +15,13 @@
 * Binary types: bytes, bytearray, memoryview
 * NoneType: NoneType
 
+### how Python Lists are capable of doing things like Dynamic sizing and storing Heterogeneous Elements?
+* The secret is, when we create a list, it actually holds references (pointers) to objects rather than the raw data in a dynamic array.
+* These objects can be of any data type, so size would not be an issue.
+* The Underlying data structure for Python lists is dynamic array. The idea used is similar to implementation of vectors in C++ or ArrayList in Java.
+* A dynamic array is an array-like data structure with automatic resizing. The underlying array is dynamically resized as elements are added or removed, allowing the list to efficiently grow or shrink as needed.
+* [Details](https://medium.com/@AbhiramiVS/python-lists-a-comprehensive-guide-to-implementation-and-alternatives-b2b4ce99374e)
+
 ### What are the differences between list and tuple and set?
 * Tuples are immutable objects, lists are mutable
 * Once defined, tuples have a fixed length and lists have a dynamic length
@@ -57,4 +64,43 @@ add2 = lambda x,y: x+y
 ### Explain the difference between "is" and "=="?
 * "==" checks only values are equal or not where "is" operator checks reference with values
 
+### What is PEP 8?
+* PEP 8 is the style guide for writing Python code
+* It provides guidelines and best practices for formatting Python code to ensure readability and consistency across python projects
 
+### What is the difference between / and // in python?
+* // defines floor division where single slash defines precise division
+```
+5//2 = 2
+5/2  = 2.5
+```
+
+### What are *args((Non-Keyword Arguments)) and *kwargs(Keyword Arguments)?
+* *args accepts all the parameters passed to the function and computes the function operations for each of them.
+* Keyword arguments are like a dictionary, which maps the value to its associated key
+```
+# Program to add and display the sum of n number of integer
+def add(*num):
+    sum = 0;
+    for n in num:
+        sum = sum + n;
+    print("Sum:", sum)
+
+add(2,6)
+add(3,4,5,6,7)
+add(1,2,3,5,6,7,8)
+```
+
+```
+# Print values of function Person along with its associated keywords
+def Person(**kwargs):
+    for key, value in kwargs.items():
+        print("{} -> {}".format(key, value))    # OR print(f'{key} -> {value}')
+Person(Name = 'Sean', Sex = 'Male', Age = 38, City = 'London', Mobile = 9375821987)
+```
+
+### What is the difference between xrange and range functions?
+* range() generates a list
+* it consumes more memory, especially when dealing with a large sequence of numbers
+* xrange() generates numbers on demand, making it a more memory-friendly option
+* ![](resources/images/xrange_range.png)
