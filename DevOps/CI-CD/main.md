@@ -89,27 +89,5 @@ CD automates the deployment of tested code to a target environment. Depending on
 
 With CI/CD, teams can iterate rapidly and maintain high software quality standards.
 
+<img src="resources/images/ci-cd-flow.svg" alt="CI/CD Pipeline">
 
-<div class="mermaid">
-graph TD
-    subgraph CI[Continuous Integration]
-        A[Developer Commits Code] --> B[Trigger CI Pipeline]
-        B --> C[Checkout Code]
-        C --> D[Install Dependencies]
-        D --> E[Run Automated Tests]
-        E --> F{Tests Pass?}
-        F -->|Yes| G[Build Artifacts]
-        F -->|No| H[Notify Developer with Logs]
-    end
-
-    subgraph CD[Continuous Deployment/Delivery]
-        G --> I{Manual Approval Required?}
-        I -->|Yes| J[Deploy to Staging Environment]
-        I -->|No| K[Deploy to Production]
-        J --> L[Run Post-Deployment Checks]
-        K --> L
-        L --> M{Post-Deployment Checks Pass?}
-        M -->|Yes| N[Notify Team of Success]
-        M -->|No| O[Alert Team of Failure]
-    end
-</div>
