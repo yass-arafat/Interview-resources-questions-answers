@@ -89,5 +89,5 @@ CD automates the deployment of tested code to a target environment. Depending on
 
 With CI/CD, teams can iterate rapidly and maintain high software quality standards.
 ## **CI/CD Flowchart**
-<img height="500" src="resources/images/ci-cd-flow.svg" alt="CI/CD Pipeline">
+<img height="1000" src="resources/images/ci-cd-flow.svg" alt="CI/CD Pipeline">
 
